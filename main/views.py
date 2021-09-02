@@ -27,3 +27,6 @@ def products(request):
         prods=product.objects.all()
 
         return render(request,"products-view.html",{'prods':prods})
+
+def buy(request):
+    return render(request,"buy.html")

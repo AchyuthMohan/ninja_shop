@@ -10,4 +10,5 @@ urlpatterns = [
     path('',views.login),
     path('register/',views.register),
     path('products/',views.products),
+    path('buy/',views.buy),
 ]
