@@ -7,6 +7,7 @@ def login(request):
 def register(request):
     if request.method=='POST':
         email=request.POST['email']
+        name=request.POST['name']
         address=request.POST['address']
         address2=request.POST['address2']
         password=request.POST['password']
@@ -14,7 +15,7 @@ def register(request):
         city=request.POST['city']
 
 
-        c=customer(email=email,address=address,address2=address2,password=password,state=state,city=city)
+        c=customer(email=email,name=name,address=address,address2=address2,password=password,state=state,city=city)
         c.save();
         return redirect('/')
     else:

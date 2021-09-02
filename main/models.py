@@ -3,8 +3,9 @@ from django.db.models.base import Model
 
 # Create your models here.
 class customer(models.Model):
+    
     email=models.EmailField()
-    name=models.TextField(max_length=20)
+    name=models.CharField(max_length=100)
     address=models.TextField(max_length=20)
     address2=models.TextField(max_length=20)
     city=models.TextField(max_length=20)
