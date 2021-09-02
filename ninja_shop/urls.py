@@ -5,11 +5,12 @@ from django.urls import path
 from django.urls.conf import include
 import main
 from main import urls
-
-
+from django.conf.urls.static import static
+from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include(main.urls)),
     path('register/',include(main.urls)),
     path('products/',include(main.urls)),
 ]
+urlpatterns=urlpatterns+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

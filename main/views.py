@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import customer
+from .models import product
 
 # Create your views here.
 def login(request):
@@ -23,4 +24,6 @@ def register(request):
 
 def products(request):
     if request.method=="POST":
-        return render(request,"products-view.html")
+        prods=product.objects.all()
+
+        return render(request,"products-view.html",{'prods':prods})
