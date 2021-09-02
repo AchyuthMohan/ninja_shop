@@ -10,6 +10,7 @@ class customer(models.Model):
     city=models.TextField(max_length=20)
     state=models.TextField(max_length=20)
     password=models.TextField(max_length=20)
+
 class product(models.Model):
     price=models.IntegerField()
     name=models.CharField(max_length=100)
