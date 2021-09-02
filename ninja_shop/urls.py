@@ -11,4 +11,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include(main.urls)),
     path('register/',include(main.urls)),
+    path('products/',include(main.urls)),
 ]

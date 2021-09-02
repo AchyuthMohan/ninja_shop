@@ -17,4 +17,9 @@ def register(request):
         c=customer(email=email,address=address,address2=address2,password=password,state=state,city=city)
         c.save();
         return redirect('/')
-    return render(request,"register.html")
+    else:
+        return render(request,"register.html")
+
+def products(request):
+    if request.method=="POST":
+        return render(request,"products-view.html")
