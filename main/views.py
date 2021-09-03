@@ -40,5 +40,7 @@ def buy(request):
     return render(request,"buy.html")
 
 
-
+def success(request):
+    if request.method=='POST':
+        return render(request,"success.html")
 
