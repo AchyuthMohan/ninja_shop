@@ -18,3 +18,6 @@ class product(models.Model):
     desc=models.TextField()
     release_date=models.DateField()
     img=models.ImageField(upload_to='pics')
+
+
+
